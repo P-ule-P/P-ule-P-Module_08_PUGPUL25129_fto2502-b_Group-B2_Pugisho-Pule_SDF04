@@ -1,42 +1,68 @@
 footer {
-  background-color: #659f8f; /* Footer background color */
+  background-color: #659f8f;
   padding: 50px 0;
-  color: #2c2c2c; /* Text color */
+  color: #2c2c2c;
+  font-family: Open Sans, sans-serif;
+  margin-top: 0 auto;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  max-width: 1200px;
+  align-items: flex-start;
   margin: 0 auto;
+  max-width: 90%;
+  padding: 0 8.5%;
 }
 
 .col {
   flex: 1;
 }
+
+.list-header {
+  margin-bottom: 20px;
+  margin-top: -5px;
+}
+
+.col-2 {
+  margin-right: 0;
+}
+
 .col-3 {
-  position: absolute;
-  right: 150px;
+  position: relative;
+  right: auto;
+  text-align: left;
+  margin-right: 20em;
+}
+
+.newsletter {
+  margin-left: 27px;
 }
 
 h1 {
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-right: 0;
 }
 
 input {
-  padding: 9px;
-  width: 160px;
+  padding: 11px;
+  width: 100%;
+  max-width: 160px;
   margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 10px 18px;
   background: #d3704a;
   color: white;
+  font-family: Open Sans, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,7 +75,7 @@ button:hover {
 ul {
   list-style: none;
   margin-bottom: 30px;
-  margin-right: 200px;
+  margin-right: 0;
 }
 
 ul li {
@@ -59,18 +85,13 @@ ul li {
 }
 
 .flex {
-  display: flex;
-  justify-content: start;
-  align-items: center;
   padding: 20px 0;
-  margin-left: 160px;
-  margin-right: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
   border-top: 1px solid #d3704a;
 }
 
 .flex a {
-  display: flex;
-  align-items: center;
   font-size: 24px;
   text-decoration: none;
   color: white;
@@ -86,13 +107,158 @@ a:focus {
   color: blue;
 }
 
-/* a:visited {
-  color: purple;
-} */
-
 img {
-  display: inline-block; /* Ensures the image is visible */
-  width: 150px;
+  display: inline-block;
+  width: 160px;
   height: auto;
-  max-width: 100%; /* Prevents overflow */
+  max-width: 100%;
+}
+
+/* iPad Mini (768px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    border-radius: 1em;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .newsletter {
+    display: inline-block;
+    width: 100%;
+    max-width: 90%;
+    margin-left: 2.5em;
+    margin-bottom: 1.5em;
+  }
+
+  h1 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  input {
+    padding: 10px;
+    width: 100%;
+    max-width: 175px;
+    margin-right: 10px;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: start;
+    list-style: none;
+  }
+
+  .col-3 {
+    margin-right: 17em;
+  }
+
+  .flex {
+    padding: 20px 0;
+    margin-left: 7.5%;
+    margin-right: 10%;
+    border-top: 1px solid #d3704a;
+
+    img {
+      display: inline-block;
+      width: 150px;
+      height: auto;
+      max-width: 100%;
+      margin-left: auto;
+    }
+  }
+}
+
+/* iPhone SE (375px - 667px) */
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  footer {
+    border-radius: 1em;
+    text-align: start;
+  }
+
+  .container {
+    max-width: 90%;
+    /margin: 0 auto;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .col-3 {
+    margin-right: 0;
+    text-align: start;
+  }
+
+  h1 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 90%;
+    max-width: 270px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  input::placeholder {
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  button {
+    width: 90%;
+    /max-width: 300px;
+    padding: 10px;
+    background: #d3704a;
+    color: white;
+    font-family: Open Sans, sans-serif;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    align-items: start;
+    margin-right: 13em;
+  }
+
+  .flex {
+    padding: 20px 0;
+    border-top: 1px solid #d3704a;
+    text-align: start;
+  }
+
+  img {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+  }
 }
